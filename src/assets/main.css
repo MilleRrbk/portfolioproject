@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #16100F;
+  height: 100vh;
+  width: 100vw;
+  /*overflow: hidden; prevents scrolling past content in viewport */
+}
+
+.gridContainer {
+  display: grid;
+    grid-template-columns: 1.5fr repeat(2, 4fr) 1fr ;
+    grid-template-rows: repeat(4, 1fr);
+    height: 100vh;
+    width: 100vw;
+    position: static; /* Set the grid container to relative positioning */
+}
+.titleContainer {
+  grid-column: 2 / span 2; /* Span two columns starting from column 2 */
+  grid-row: 2;
+  justify-items: center;
+}
+
+.navContainer {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: center;
+  font-size: 1.3em;
+}
+
+.navCategories {
+  padding-bottom: 3vh;
+}
+
+.gridContainerProjects {
+  display: grid;
+    grid-template-columns: 1.5fr repeat(2, 4fr) 1fr ;
+    grid-template-rows: 2fr 1fr 3fr 3fr;
+    height: 100vh;
+    width: 100vw;
+    position: static; /* Set the grid container to relative positioning */
+}
+
+.headlineContainer {
+  grid-column: 2 /span 2;
+  grid-row: 2;
+  justify-items: center;
+  margin-top: 7vh;
+}
+
+.backButton {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: center;
+  margin-bottom: 2vh;
+  margin-top: 12vh;
+  margin-left: 12vh;
+}
+/* Styling for the button */
+.router-link-button {
+  width: 3.5vw; /* dimensions of the button */
+  height: auto;
+  position: fixed;
+  animation: hoverAnimation 2s infinite alternate ease-in-out; /* apply animation */}
+/* Keyframes for the hover animation */
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0.5vh); /* starting position */
+  }
+  100% {
+    transform: translateY(-0.5vh); /* ending position */
+  }
+}
+
+
+
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+.bakbak-one-regular {
+  font-family: "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    font-family: 'Bakbak One', sans-serif;
+  }
+
+  .gridContainerAbout {
+    display: grid;
+      grid-template-columns: 1.5fr repeat(2, 4fr) 1fr ;
+      grid-template-rows: 2fr 1fr 3fr;
+      height: 100vh;
+      width: 100vw;
+      position: static; /* Set the grid container to relative positioning */
+  }
+  
